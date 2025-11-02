@@ -15,7 +15,7 @@ body {
     font-family: 'poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: #fff;
+    background: transparent;
     overflow-x: hidden;
 }
 
@@ -34,8 +34,13 @@ img {
 
 /* Navbar */
 .navbar {
-    background: #fff;
-    padding: 20px;
+  position: absolute;
+  top: 20px;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
 }
 
 .navbar .container {
@@ -69,13 +74,39 @@ img {
 
 }
 
+/* Navbar about*/
+
+.about-page-light .navbar .main-menu ul li a {
+    color: #fff; 
+}
+
+.about-page-light .navbar .main-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+.about-page-light .hamburger-button .hamburger-line {
+    background: #fff; 
+}
+
+.about-page-light .navbar .main-menu ul li a.btn {
+    background: #333; 
+    color: #fff;
+}
+
+.about-page-light .navbar .main-menu ul li a.btn:hover {
+    background: #000;
+    color: var(--primary-color); 
+
+}
+
 
 /* Hero */
 .hero {
-    margin-bottom: 50px;
+    margin-bottom: 120px;
 }
 
 .hero .container {
+    padding-top: 20px;
     background:  #fff;
     background-repeat: no-repeat, no-repeat;
     background-size: contain, 450px 200px;
@@ -224,14 +255,14 @@ img {
 /* about list */
 
 .about {
-  background: #ffff;
-  color: #111;
-  padding: 4rem 0;
+  padding-top: 100px; 
+  min-height: calc(100vh - 100px);
+  background: transparent; 
 }
 
 .about-block {
-  background: rgba(255, 255, 255, 0.05); 
-  color: #000;
+  background: rgba(0, 0, 0, 0.637); 
+  color: #fff;
   padding: 0.5rem;
   border-radius: 12px;
   margin-bottom: 0.5rem; 
@@ -239,7 +270,7 @@ img {
 }
 
 .about-block:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #000;
 }
 
 .about .card {
@@ -259,6 +290,8 @@ img {
 .about-text h1 {
   margin-top: -20px;   
   padding-top: 0; 
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 
@@ -341,10 +374,8 @@ img {
     
 }
 
-.hero, 
 .video, 
-.testimonials, 
-.navbar {
+.testimonials {
     background: #fff; 
 }
 
@@ -438,6 +469,38 @@ opacity: 0.8;
     text-align: center;
 }
 
+/* Background wrapper about page */
+
+.hero-wrapper {
+  background-attachment: fixed;
+  position: relative;
+  background-image: url('../slike/medzine.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  color: white;
+}
+
+.navbar, .about {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.hero-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+    pointer-events: none; 
+}
+
+
+
+
+
 /* Background */
 .bg-primary {
     background: var(--primary-color);
@@ -460,14 +523,7 @@ opacity: 0.8;
     color: #fff;
 }
 
-.bg-picture {
-    background-image: url('slike/medzine.jpg'); 
-    background-size: cover;         
-    background-position: center;    
-    background-repeat: no-repeat;   
-    width: 100%;                   
-    height: 400px;                 
-}
+
 
 /* Card */
 .card {
@@ -527,6 +583,7 @@ opacity: 0.8;
 }
 
 /* Media queries */
+
 @media (max-width: 960px) { 
     .text-xxl {
         font-size: 2.5rem;
@@ -608,3 +665,5 @@ opacity: 0.8;
     }
 }
 }
+
+
