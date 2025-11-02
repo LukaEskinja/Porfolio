@@ -1,0 +1,669 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --primary-color: #6eadca;
+    --light-color: #f4f4f6;
+    --dark-color: #111;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: transparent;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar ul li i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+
+}
+
+/* Navbar about*/
+
+.about-page-light .navbar .main-menu ul li a {
+    color: #fff; 
+}
+
+.about-page-light .navbar .main-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+.about-page-light .hamburger-button .hamburger-line {
+    background: #fff; 
+}
+
+.about-page-light .navbar .main-menu ul li a.btn {
+    background: #333; 
+    color: #fff;
+}
+
+.about-page-light .navbar .main-menu ul li a.btn:hover {
+    background: #000;
+    color: var(--primary-color); 
+
+}
+
+
+/* Hero */
+.hero {
+    margin-bottom: 120px;
+}
+
+.hero .container {
+    padding-top: 20px;
+    background:  #fff;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, 450px 200px;
+    background-position: top 90px right, top 300px left 14px;
+    height: 500px;
+   
+}
+
+
+
+.hero .hero-content {
+    width: 70%;
+}
+
+.hero .hero-text {
+    width: 70%;
+    margin-bottom: 30px; 
+}
+
+.hero-images {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+}
+
+.img-milano {
+  position: absolute;
+  bottom: 220px;      
+  right:  -10px;      
+  width: 500px;  
+  height: 400px;  
+  object-fit: cover;  
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.img-slovenia {
+  position: absolute;
+  bottom: 220px;      
+  left: 0px;       
+  width: 450px;   
+  height: 250px;  
+  object-fit: cover;  
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* hover effect for both images */
+.hero-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+
+
+
+}
+
+
+/*slideshow*/
+
+.slideshow-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.video-preview {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.prev, .next {
+  cursor: pointer;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Video */
+.video {
+    padding: 10px 0 40px;
+
+}
+
+.video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.video-preview {
+    margin-bottom: 20px;
+
+
+}
+
+.video img {
+  width: 400px;   
+  height: auto; 
+}
+
+/* about list */
+
+.about {
+  padding-top: 100px; 
+  min-height: calc(100vh - 100px);
+  background: transparent; 
+}
+
+.about-block {
+  background: rgba(0, 0, 0, 0.637); 
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem; 
+  line-height: 1.2;
+}
+
+.about-block:hover {
+  background: #000;
+}
+
+.about .card {
+  background: #000;
+  color: #ffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 1.3rem;
+  margin-right: 600px;
+}
+
+.about h2 {
+  margin-top: 1rem; 
+}
+
+.about-text h1 {
+  margin-top: -20px;   
+  padding-top: 0; 
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+
+/* Testimonials */
+
+.testimonials {
+   padding: 40px 0; 
+}
+
+.testimonials .testimonials-heading {
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); 
+   gap: 30px;
+}
+
+.testimonials .card p:nth-child(2) {
+    margin-top: 30px;
+    font-weight: bold;
+}
+/* footer */
+
+.footer {
+    padding: 40px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+  line-height: 2.5;  
+}
+
+.footer a{
+    color: #ccc;
+
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+  width: 50px;   
+  height: 50px;  
+}
+
+.footer .card {
+    margin: 20px 30px 30px 0;
+}
+
+.footer input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Utility classes */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;  
+    
+}
+
+.video, 
+.testimonials {
+    background: #fff; 
+}
+
+
+.container-sm {
+    max-width:800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--light-color);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+
+}
+
+
+
+/* Text classes */
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+
+}
+
+.text-lg {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Background wrapper about page */
+
+.hero-wrapper {
+  background-attachment: fixed;
+  position: relative;
+  background-image: url('../slike/medzine.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  color: white;
+}
+
+.navbar, .about {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.hero-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+    pointer-events: none; 
+}
+
+
+
+
+
+/* Background */
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #333;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+
+.bg-black {
+    background: #000;
+    color: #fff;
+}
+
+
+
+/* Card */
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Hamburger button */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+
+}
+
+/* Media queries */
+
+@media (max-width: 960px) { 
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 670px) {
+    .navbar .main-menu {
+        display: none;
+    }
+   
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    .hero .container {
+        background: url('../slike/milano.jpg') no-repeat;
+        background-size: 350px 400px;
+        background-position: center 110%;
+        height: 770px;
+    }
+
+    .hero-images {
+        display: none;
+    }
+
+    .hero .hero-content,
+    .hero .hero-text
+     {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero .hero-buttons .btn {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .testimonials .testimonials-heading {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .testimonials .testimonials-grid,
+    .footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .card {
+        margin-right: 0;
+    }
+
+    .about .card {
+    margin: 1rem auto;  
+    width: 90%; 
+
+    .footer .footer-grid > div {
+        text-align: center;
+    }
+
+    /* Text */
+    .text-xl {
+        font-size: 1.9rem;
+    }
+    .text-lg {
+        font-size: 1.5rem;
+    }
+    .text-md {
+        font-size: 1.1rem;
+    }
+
+ 
+}
+
+@media (max-width: 500px) {
+    .text-xxl {
+        font-size: 2rem;
+    }
+}
+}
+
+
